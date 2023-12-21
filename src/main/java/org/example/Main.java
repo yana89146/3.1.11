@@ -15,12 +15,13 @@ package org.example;
 //        Методы класса DynamicArray должны работать согласно описанным требованиям.
 
 
-public class DynamicArray<T> {
+class DynamicArray<T> {
     private int size;
     private T[] data;
 
+    @SuppressWarnings("unchecked")
     public DynamicArray() {
-        this.data = (T[]) new Object[7];
+        this.data = (T[])new Object[7];
     }
 
     public void add(T el) {
@@ -42,6 +43,5 @@ public class DynamicArray<T> {
             throw new ArrayIndexOutOfBoundsException();
         }
         return data[index];
-
-    }
+     }
 }
